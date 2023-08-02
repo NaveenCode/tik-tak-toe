@@ -21,6 +21,8 @@ const Board =()=>{
             [0,3,6],
             [1,4,7],
             [2,5,8],
+            [0,4,8],
+            [2,4,6]
         ]
         for(let logic of winner){
             const [a,b,c]=logic;
@@ -42,7 +44,7 @@ const Board =()=>{
             <>
                 <h1 className="text-center">Enter {isXturn?"X":"O"} </h1>
                 <div className="board-row">
-                    <Square className="bg-dark" onClick={()=>clickHandle(0)} value={state[0]}/>
+                    <Square onClick={()=>clickHandle(0)} value={state[0]}/>
                     <Square onClick={()=>clickHandle(1)} value={state[1]}/>
                     <Square onClick={()=>clickHandle(2)} value={state[2]}/>
                 </div>
